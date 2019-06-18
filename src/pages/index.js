@@ -11,6 +11,15 @@ const IndexPage = () => (
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
+    <div class="row">
+      <div class="one column">1</div>
+      <div class="one column">2</div>
+      <div class="one column">3</div>
+      <div class="one column">4</div>
+      <div class="one column">5</div>
+      <div class="one column">6</div>
+      <div class="one column">7</div>
+    </div>
     {/*<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
 </div>
