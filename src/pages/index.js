@@ -8,17 +8,25 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div class="row">
-      <div class="one column">1</div>
-      <div class="one column">2</div>
-      <div class="one column">3</div>
-      <div class="one column">4</div>
-      <div class="one column">5</div>
-      <div class="one column">6</div>
-      <div class="one column">7</div>
+    <div className="container" description="Character Information">
+      <div className="row">
+        <div className="three columns">1</div>
+        <div className="three columns">2</div>
+        <div className="three columns">3</div>
+        <div className="three columns">4</div>
+      </div>
+
+      <div className="row" description="Character Characteristics">
+      <div className="one columns">c5</div>
+        <div className="one columns">1</div>
+        <div className="one columns">2</div>
+        <div className="one columns">3</div>
+        <div className="one columns">4</div>
+        <div className="one columns">5</div>
+        <div className="one columns">6</div>
+        <div className="one columns">7</div>
+        <div className="one columns" description="Force, is conditional...">8</div>
+      </div>
     </div>
     {/*<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
