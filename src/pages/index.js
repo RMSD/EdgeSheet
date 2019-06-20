@@ -5,14 +5,15 @@ import Layout from "../components/layout"
 //import Image from "../components/image"
 import SEO from "../components/seo"
 
-const LabelMeta = { style: { textAlign: `center`, paddingRight: `200px` } }
-const rowItemPadding = {padding: `0px 50px 0px 50px`}
+const CenteredHeaderMeta = { style: { textAlign: `center`,  fontWeight: `500`, textDecoration: `underline`, paddingRight: `200px` } }
+const rowItemPadding = { padding: `0px 50px 0px 50px` }
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <div className="container" description="Character Information">
-      <div className="row">
+    <div className="container">
+      <br />
+      <div className="row" description="Character Information">
         <div className="three columns">
           <strong>Character Name</strong>
           <br />
@@ -55,8 +56,8 @@ const IndexPage = () => (
 
       <br />
 
-      <h6 {...LabelMeta}>Character Characteristics</h6>
-      <div className="row" description="Character Characteristics" style={{paddingLeft: `10px`}}>
+      <h6 {...CenteredHeaderMeta}>Character Characteristics</h6>
+      <div className="row" description="Character Characteristics" style={{ paddingLeft: `10px` }}>
         <div className="one columns" style={rowItemPadding}>
           <strong>Brawn</strong>
           <p>1</p>
@@ -81,16 +82,85 @@ const IndexPage = () => (
           <strong>Presence</strong>
           <p>1</p>
         </div>
-        <div className="one columns"  description="Force, is conditional..." style={rowItemPadding}>
+        <div className="one columns" description="Force, is conditional..." style={rowItemPadding}>
           <strong>Force</strong>
           <p>1</p>
         </div>
       </div>
+
+      <br />
+
+      <h6 {...CenteredHeaderMeta}>Skills</h6>
+      <table class="u-full-width" description="Character Skills">
+        <thead>
+          <tr>
+            <th>Skill</th>
+            <th>Carrer</th>
+            <th>Roll</th>
+            <th>Rank</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Astrogation (Int)</td>
+            <td>No</td>
+            <td>2g</td>
+            <td>1</td>
+          </tr>
+          {/*Add dynamically populating json list here*/}
+        </tbody>
+      </table>
+
+      <br />
+
+      <h6 {...CenteredHeaderMeta}>Weapons</h6>
+      <table class="u-full-width" description="Character Weapons">
+        <thead>
+          <tr>
+            <th>Weapon</th>
+            <th>Roll</th>
+            <th>Damage</th>
+            <th>Range</th>
+            <th>Skill</th>
+            <th>Special</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Blaster Pistol</td>
+            <td>2g</td>
+            <td>5</td>
+            <td>Medium</td>
+            <td>2 adv</td>
+            <td></td>
+          </tr>
+          {/*Add dynamically populating json list here*/}
+        </tbody>
+      </table>
+
+      <br />
+
+      <div className="row">
+        <div className="two columns">
+          <strong>Available Experience</strong>
+          <p>0</p>
+        </div>
+        <div className="two columns">
+          <strong>Total Experience</strong>
+          <p>0</p>
+        </div>
+        <div className="six columns"><p>&nbsp;</p></div>
+        <div className="two columns">
+          <strong>Credits</strong>
+          <p>0</p>
+        </div>
+      </div>
+
+      {/*<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+        <Image />
+        </div>
+        <Link to="/page-2/">Go to page 2</Link>*/}
     </div>
-    {/*<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-</div>
-    <Link to="/page-2/">Go to page 2</Link>*/}
   </Layout>
 )
 
