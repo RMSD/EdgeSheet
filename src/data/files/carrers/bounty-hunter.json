@@ -1,6 +1,6 @@
 {
-    "class": "Bounty Hunter",
-    "classSkills": ["Athletics", "Brawl", "Perception", "Piloting (Planetary)", "Piloting (Space)", "Ranged (Heavy)", "Streetwise", "Vigilance"],
+    "carrer": "Bounty Hunter",
+    "carrerSkills": ["Athletics", "Brawl", "Perception", "Piloting (Planetary)", "Piloting (Space)", "Ranged (Heavy)", "Streetwise", "Vigilance"],
     "specializations": [
         {
             "specialization": "Assassin",

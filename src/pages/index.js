@@ -73,7 +73,7 @@ const IndexPage = () => (
       <br />
 
       <h6 {...CenteredHeaderMeta}>Skills</h6>
-      <table class="u-full-width" description="Character Skills">
+      <table className="u-full-width" description="Character Skills">
         <thead>
           <tr>
             <th>Skill</th>
@@ -96,7 +96,7 @@ const IndexPage = () => (
       <br />
 
       <h6 {...CenteredHeaderMeta}>Weapons</h6>
-      <table class="u-full-width" description="Character Weapons">
+      <table className="u-full-width" description="Character Weapons">
         <thead>
           <tr>
             <th>Weapon</th>

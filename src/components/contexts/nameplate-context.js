@@ -14,9 +14,9 @@ const initialState = {
     name: "Default Name",
     species: "Human",
     carrer: {
-        name: "smuggler",
-        specialization: "Gunslinger"
-    }
+        specializations: []
+    },
+    specialization: {}
 };
 
 /* Reducer */
@@ -27,13 +27,13 @@ export const reducer = (state, action) => {
             newState.name = action.value;
             break;
         case CHANGE_SPECIES:
-            newState.value = action.value;
+            newState.species = action.value;
             break;
         case CHANGE_CARRER:
             newState.carrer = action.value;
             break;
         case CHANGE_SPECIALIZATION:
-            newState.carrer.specialization = action.value;
+            newState.specialization = action.value;
             break;
         default:
             break;

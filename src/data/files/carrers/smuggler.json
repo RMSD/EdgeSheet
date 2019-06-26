@@ -1,6 +1,6 @@
 {
-    "class": "Smuggler",
-    "classSkills": ["Coordination", "Deception", "Knowledge (Underworld)", "Perception", "Piloting (Space)", "Skulduggery", "Streetwise", "Vigilance"],
+    "carrer": "Smuggler",
+    "carrerSkills": ["Coordination", "Deception", "Knowledge (Underworld)", "Perception", "Piloting (Space)", "Skulduggery", "Streetwise", "Vigilance"],
     "specializations": [
         {
             "specialization": "Pilot",

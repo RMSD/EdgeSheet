@@ -1,18 +1,21 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const carrers = () => {
-    const { carrers } = useStaticQuery(
-        graphql`
-      query JSON {
-            allLettersJson {
-              edges {
-                node {
-                  skills
-                  classSkills
-                  specializations
-                }
-              }
+export const useCarrers = () => {
+  const carrers = useStaticQuery(
+    graphql`query MyQuery {
+      allCarrersJson {
+        edges {
+          node {
+            carrer
+            carrerSkills
+            specializations {
+              bonusSkills
+              sourceBook
+              specialization
             }
-        }`)
-    return carrers
+          }
+        }
+      }
+    }`)
+  return carrers.allCarrersJson.edges
 }
