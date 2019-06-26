@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import { SpeciesDropdown, CarrerDropdown, SpecializationDropdown } from "./nameplate-dropdowns"
+import { SpeciesDropdown, CareerDropdown, SpecializationDropdown } from "./nameplate-dropdowns"
 import { NameplateState, DispatchNamePlate, CHANGE_NAME } from "../contexts/nameplate-context.js"
 
 const CharacterDescriptionPanel = () => {
@@ -18,7 +18,7 @@ const CharacterDescriptionPanel = () => {
             </div>
             <div className="three columns">
                 <strong>Carrer</strong>
-                <CarrerDropdown />
+                <CareerDropdown />
             </div>
             <div className="three columns">
                 <strong>Specialization Trees</strong>

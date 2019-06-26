@@ -1,5 +1,5 @@
 {
-    "carrer": "Bounty Hunter",
+    "career": "Bounty Hunter",
     "carrerSkills": ["Athletics", "Brawl", "Perception", "Piloting (Planetary)", "Piloting (Space)", "Ranged (Heavy)", "Streetwise", "Vigilance"],
     "specializations": [
         {

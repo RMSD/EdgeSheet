@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
-import { NameplateState, DispatchNamePlate, CHANGE_SPECIES, CHANGE_CARRER, CHANGE_SPECIALIZATION } from "../contexts/nameplate-context.js"
-import { useCarrers } from "../../data/queries/carrer-query"
+import { NameplateState, DispatchNamePlate, CHANGE_SPECIES, CHANGE_CAREER, CHANGE_SPECIALIZATION } from "../contexts/nameplate-context.js"
+import { useCareers } from "../../data/queries/career-query"
 
 export const SpeciesDropdown = () => {
     const state = useContext(NameplateState);
@@ -15,21 +15,21 @@ export const SpeciesDropdown = () => {
     )
 }
 
-export const CarrerDropdown = () => {
+export const CareerDropdown = () => {
     const state = useContext(NameplateState);
     const dispatch = useContext(DispatchNamePlate);
-    const carrers = useCarrers()
+    const carrers = useCareers()
 
     const nodes = new Map()
     const options = []
 
     carrers.forEach(element => {
-        nodes.set(element.node.carrer, element.node)
-        options.push(<option key={element.node.carrer} value={element.node.carrer}>{element.node.carrer}</option>)
+        nodes.set(element.node.career, element.node)
+        options.push(<option key={element.node.career} value={element.node.career}>{element.node.career}</option>)
     });
 
     return (
-        <select className="u-full-width" id="ClassDropdown" value={state.carrer.carrer} onChange={(event) => dispatch({ type: CHANGE_CARRER, value: nodes.get(event.target.value) })}>
+        <select className="u-full-width" id="ClassDropdown" value={state.career.career} onChange={(event) => dispatch({ type: CHANGE_CAREER, value: nodes.get(event.target.value) })}>
             {options}
         </select>
     )
@@ -39,14 +39,16 @@ export const SpecializationDropdown = () => {
     const state = useContext(NameplateState);
     const dispatch = useContext(DispatchNamePlate);
 
+    const nodes = new Map()
     const options = []
 
-    state.carrer.specializations.forEach(element => {
+    state.career.specializations.forEach(element => {
+        nodes.set(element.specialization, element)
         options.push(<option key={element.specialization} value={element}>{element.specialization}</option>)
     });
 
     return (
-        <select className="u-full-width" id="SpecializationDropdown" value={state.specialization} onChange={(event) => dispatch({ type: CHANGE_SPECIALIZATION, value: event.target.value })}>
+        <select className="u-full-width" id="SpecializationDropdown" value={state.specialization} onChange={(event) => dispatch({ type: CHANGE_SPECIALIZATION, value: nodes.get(event.target.value) })}>
             {options}
         </select>
     )

@@ -1,12 +1,12 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const useCarrers = () => {
-  const carrers = useStaticQuery(
+export const useCareers = () => {
+  const careers = useStaticQuery(
     graphql`query MyQuery {
-      allCarrersJson {
+      allCareersJson {
         edges {
           node {
-            carrer
+            career
             carrerSkills
             specializations {
               bonusSkills
@@ -17,5 +17,5 @@ export const useCarrers = () => {
         }
       }
     }`)
-  return carrers.allCarrersJson.edges
+  return careers.allCareersJson.edges
 }
