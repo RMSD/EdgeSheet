@@ -1,6 +1,6 @@
 {
     "career": "Smuggler",
-    "carrerSkills": ["Coordination", "Deception", "Knowledge (Underworld)", "Perception", "Piloting (Space)", "Skulduggery", "Streetwise", "Vigilance"],
+    "careerSkills": ["Coordination", "Deception", "Knowledge (Underworld)", "Perception", "Piloting (Space)", "Skulduggery", "Streetwise", "Vigilance"],
     "specializations": [
         {
             "specialization": "Pilot",

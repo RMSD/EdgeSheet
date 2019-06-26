@@ -7,7 +7,7 @@ export const useCareers = () => {
         edges {
           node {
             career
-            carrerSkills
+            careerSkills
             specializations {
               bonusSkills
               sourceBook
