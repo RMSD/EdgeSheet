@@ -12,6 +12,7 @@ import { StaticQuery, graphql } from "gatsby"
 // import Header from "./header"
 import "./css/skeleton.css"
 import "./css/normalize.css"
+import NameplateStateWrapper from "./contexts/nameplate-context";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -27,7 +28,9 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-        <main>{children}</main>
+        <NameplateStateWrapper>
+          <main>{children}</main>
+        </NameplateStateWrapper>
         <br />
         <div className="container">
           <footer>

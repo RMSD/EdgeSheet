@@ -2,10 +2,11 @@ import React from "react"
 // import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-//import Image from "../components/image"
+import CharacterDescriptionPanel from "../components/nameplate_components/nameplate"
 import SEO from "../components/seo"
+//import Image from "../components/image"
 
-const CenteredHeaderMeta = { style: { textAlign: `center`,  fontWeight: `500`, textDecoration: `underline`, paddingRight: `200px` } }
+const CenteredHeaderMeta = { style: { textAlign: `center`, fontWeight: `500`, textDecoration: `underline`, paddingRight: `200px` } }
 const rowItemPadding = { padding: `0px 50px 0px 50px` }
 
 const IndexPage = () => (
@@ -13,26 +14,7 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div className="container">
       <br />
-      <div className="row" description="Character Information">
-        <div className="three columns">
-          <strong>Character Name</strong>
-          <br />
-          <em>Default Name</em>
-        </div>
-        <div className="three columns">
-          <strong>Species</strong>
-          <p>Human</p>
-        </div>
-        <div className="three columns">
-          <strong>Carrer</strong>
-          <p>Smuggler</p>
-        </div>
-        <div className="three columns">
-          <strong>Specialization Trees</strong>
-          <p>Gunslinger</p>
-        </div>
-      </div>
-
+      <CharacterDescriptionPanel />
       <br />
 
       <div className="row">
