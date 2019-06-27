@@ -66,7 +66,7 @@ const IndexPage = () => (
         </div>
         <div className="one columns" description="Force, is conditional..." style={rowItemPadding}>
           <strong>Force</strong>
-          <p>1</p>
+          <p>Feature Coming Soon</p>
         </div>
       </div>
 
