@@ -1,6 +1,5 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-
 export const useSpecies = () => {
     const careers = useStaticQuery(
       graphql`query MySpecies {

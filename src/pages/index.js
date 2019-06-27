@@ -2,7 +2,7 @@ import React from "react"
 // import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import CharacterDescriptionPanel from "../components/nameplate_components/nameplate"
+import CharacterDescriptionPanel from "../components/components/nameplate/nameplate"
 import SEO from "../components/seo"
 //import Image from "../components/image"
 
@@ -14,9 +14,12 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div className="container">
       <br />
+
       <CharacterDescriptionPanel />
+
       <br />
 
+      <h6 {...CenteredHeaderMeta}>Character Characteristics</h6>
       <div className="row">
         <div className="three columns">
           <strong>Soak</strong>
@@ -38,7 +41,6 @@ const IndexPage = () => (
 
       <br />
 
-      <h6 {...CenteredHeaderMeta}>Character Characteristics</h6>
       <div className="row" description="Character Characteristics" style={{ paddingLeft: `10px` }}>
         <div className="one columns" style={rowItemPadding}>
           <strong>Brawn</strong>

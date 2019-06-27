@@ -1,10 +1,10 @@
 import React, { useContext } from "react"
 import { SpeciesDropdown, CareerDropdown, SpecializationDropdown } from "./nameplate-dropdowns"
-import { NameplateState, DispatchNamePlate, CHANGE_NAME } from "../contexts/nameplate-context.js"
+import { State, Dispatch, CHANGE_NAME } from "../../contexts/context"
 
 const CharacterDescriptionPanel = () => {
-    const state = useContext(NameplateState);
-    const dispatch = useContext(DispatchNamePlate);
+    const state = useContext(State);
+    const dispatch = useContext(Dispatch);
 
     return (
         <div className="row" description="Character Information">
