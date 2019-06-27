@@ -2,7 +2,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 export const useCareers = () => {
   const careers = useStaticQuery(
-    graphql`query MyQuery {
+    graphql`query MyCareers {
       allCareersJson {
         edges {
           node {
