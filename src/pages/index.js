@@ -7,7 +7,7 @@ import CharacteristicDescriptionPanel from "../components/components/characteris
 import SEO from "../components/seo"
 //import Image from "../components/image"
 
-const CenteredHeaderMeta = { style: { textAlign: `center`, fontWeight: `500`, textDecoration: `underline`, paddingRight: `200px` } }
+const CenteredHeaderMeta = { style: { textAlign: `center`, fontWeight: `500`, textDecoration: `underline` } }
 
 const IndexPage = () => (
   <Layout>
