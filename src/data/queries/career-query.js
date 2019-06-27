@@ -9,9 +9,9 @@ export const useCareers = () => {
             career
             careerSkills
             specializations {
+              name
               bonusSkills
               sourceBook
-              specialization
             }
           }
         }

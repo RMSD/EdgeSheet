@@ -68,16 +68,16 @@ export const SpecializationDropdown = () => {
     const options = []
 
     specializations.sort((a, b) => {
-        return sort(a.specialization.toLowerCase(), b.specialization.toLowerCase())
+        return sort(a.name.toLowerCase(), b.name.toLowerCase())
     })
 
     specializations.forEach(element => {
-        nodes.set(element.specialization, element)
-        options.push(<option key={element.specialization} value={element.specialization}>{element.specialization}</option>)
+        nodes.set(element.name, element)
+        options.push(<option key={element.name} value={element.name}>{element.name}</option>)
     });
 
     return (
-        <select className="u-full-width" id="SpecializationDropdown" value={state.specialization}
+        <select className="u-full-width" id="SpecializationDropdown" value={state.specialization.name}
             onChange={(event) => dispatch({ type: CHANGE_SPECIALIZATION, value: nodes.get(event.target.value) })}>
             {options}
         </select>

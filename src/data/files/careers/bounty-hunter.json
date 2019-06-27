@@ -3,7 +3,7 @@
     "careerSkills": ["Athletics", "Brawl", "Perception", "Piloting (Planetary)", "Piloting (Space)", "Ranged (Heavy)", "Streetwise", "Vigilance"],
     "specializations": [
         {
-            "specialization": "Assassin",
+            "name": "Assassin",
             "bonusSkills": ["Melee", "Ranged (Heavy)", "Skulduggery", "Stealth"],
             "sourceBook": "Edge of the Empire Source Book P."
         }

@@ -46,9 +46,21 @@ const initialState = {
         sourceBook: "Edge of the Empire"
     },
     career: {
-        specializations: []
+        career: "Bounty Hunter",
+        careerSkills: ["Athletics", "Brawl", "Perception", "Piloting (Planetary)", "Piloting (Space)", "Ranged (Heavy)", "Streetwise", "Vigilance"],
+        specializations: [
+            {
+                name: "Assassin",
+                bonusSkills: ["Melee", "Ranged (Heavy)", "Skulduggery", "Stealth"],
+                sourceBook: "Edge of the Empire Source Book P."
+            }
+        ]
     },
-    specialization: {}
+    specialization: {
+        name: "Assassin",
+        bonusSkills: ["Melee", "Ranged (Heavy)", "Skulduggery", "Stealth"],
+        sourceBook: "Edge of the Empire Source Book P."
+    }
 };
 
 /* Reducer */
