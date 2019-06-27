@@ -13,6 +13,7 @@ import { StaticQuery, graphql } from "gatsby"
 import "./css/skeleton.css"
 import "./css/normalize.css"
 import NameplateStateWrapper from "./contexts/nameplate-context";
+import CharacteristicStateWrapper from "./contexts/characteristic-context";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -29,7 +30,9 @@ const Layout = ({ children }) => (
       <>
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <NameplateStateWrapper>
-          <main>{children}</main>
+          <CharacteristicStateWrapper>
+            <main>{children}</main>
+          </CharacteristicStateWrapper>
         </NameplateStateWrapper>
         <br />
         <div className="container">

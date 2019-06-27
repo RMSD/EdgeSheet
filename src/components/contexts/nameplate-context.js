@@ -12,7 +12,39 @@ export const DispatchNamePlate = React.createContext(() => null);
 
 const initialState = {
     name: "Default Name",
-    species: "Human",
+    species: {
+        name: "Human",
+        baseCharacterstics: [{
+            key: "Brawn",
+            value: 2
+        },
+        {
+            key: "Agility",
+            value: 2
+        },
+        {
+            key: "Intellect",
+            value: 2
+        },
+        {
+            key: "Cunning",
+            value: 2
+        },
+        {
+            key: "Willpower",
+            value: 2
+        },
+        {
+            key: "Presence",
+            value: 2
+        }],
+        baseWounds: 10,
+        woundCharacterstic: "Brawn",
+        baseStrain: 10,
+        strainCharacterstic: "Willpower",
+        speciesFeat: "1 rank in any 2 non-career skills",
+        sourceBook: "Edge of the Empire"
+    },
     career: {
         specializations: []
     },

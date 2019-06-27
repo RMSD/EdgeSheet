@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import { State, Dispatch, CHANGE_SPECIES, CHANGE_CAREER, CHANGE_SPECIALIZATION } from "../../contexts/context"
+import { NameplateState, DispatchNamePlate, CHANGE_SPECIES, CHANGE_CAREER, CHANGE_SPECIALIZATION } from "../../contexts/nameplate-context"
 import { useCareers } from "../../../data/queries/career-query"
 import { useSpecies } from "../../../data/queries/species-query"
 
@@ -10,8 +10,8 @@ const sort = (x, y) => {
 }
 
 export const SpeciesDropdown = () => {
-    const state = useContext(State);
-    const dispatch = useContext(Dispatch);
+    const state = useContext(NameplateState);
+    const dispatch = useContext(DispatchNamePlate);
     const species = useSpecies()
 
     species.sort((a, b) => {
@@ -35,8 +35,8 @@ export const SpeciesDropdown = () => {
 }
 
 export const CareerDropdown = () => {
-    const state = useContext(State);
-    const dispatch = useContext(Dispatch);
+    const state = useContext(NameplateState);
+    const dispatch = useContext(DispatchNamePlate);
     const carrers = useCareers()
 
     carrers.sort((a, b) => {
@@ -60,8 +60,8 @@ export const CareerDropdown = () => {
 }
 
 export const SpecializationDropdown = () => {
-    const state = useContext(State);
-    const dispatch = useContext(Dispatch);
+    const state = useContext(NameplateState);
+    const dispatch = useContext(DispatchNamePlate);
     const specializations = state.career.specializations
 
     const nodes = new Map()

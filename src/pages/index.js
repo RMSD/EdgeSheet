@@ -3,75 +3,28 @@ import React from "react"
 
 import Layout from "../components/layout"
 import CharacterDescriptionPanel from "../components/components/nameplate/nameplate"
+import CharacteristicDescriptionPanel from "../components/components/characteristics/characteristics"
 import SEO from "../components/seo"
 //import Image from "../components/image"
 
 const CenteredHeaderMeta = { style: { textAlign: `center`, fontWeight: `500`, textDecoration: `underline`, paddingRight: `200px` } }
-const rowItemPadding = { padding: `0px 50px 0px 50px` }
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div className="container">
       <br />
+      <br />
 
       <CharacterDescriptionPanel />
 
       <br />
-
-      <h6 {...CenteredHeaderMeta}>Character Characteristics</h6>
-      <div className="row">
-        <div className="three columns">
-          <strong>Soak</strong>
-          <p>0</p>
-        </div>
-        <div className="three columns">
-          <strong>Wounds Maximum</strong>
-          <p>10</p>
-        </div>
-        <div className="three columns">
-          <strong>Strain Maximum</strong>
-          <p>10</p>
-        </div>
-        <div className="three columns">
-          <strong>Defense Maximum</strong>
-          <p>0</p>
-        </div>
-      </div>
-
       <br />
 
-      <div className="row" description="Character Characteristics" style={{ paddingLeft: `10px` }}>
-        <div className="one columns" style={rowItemPadding}>
-          <strong>Brawn</strong>
-          <p>1</p>
-        </div>
-        <div className="one columns" style={rowItemPadding}>
-          <strong>Agility</strong>
-          <p>1</p>
-        </div>
-        <div className="one columns" style={rowItemPadding}>
-          <strong>Intellect</strong>
-          <p>1</p>
-        </div>
-        <div className="one columns" style={rowItemPadding}>
-          <strong>Cunning</strong>
-          <p>1</p>
-        </div>
-        <div className="one columns" style={rowItemPadding}>
-          <strong>Willpower</strong>
-          <p>1</p>
-        </div>
-        <div className="one columns" style={rowItemPadding}>
-          <strong>Presence</strong>
-          <p>1</p>
-        </div>
-        <div className="one columns" description="Force, is conditional..." style={rowItemPadding}>
-          <strong>Force</strong>
-          <p>Feature Coming Soon</p>
-        </div>
-      </div>
+      <h6 {...CenteredHeaderMeta}>Character Characteristics</h6>
+      <CharacteristicDescriptionPanel />
 
+      <br />
       <br />
 
       <h6 {...CenteredHeaderMeta}>Skills</h6>
@@ -95,6 +48,7 @@ const IndexPage = () => (
         </tbody>
       </table>
 
+      <br />
       <br />
 
       <h6 {...CenteredHeaderMeta}>Weapons</h6>
@@ -122,6 +76,7 @@ const IndexPage = () => (
         </tbody>
       </table>
 
+      <br />
       <br />
 
       <div className="row">
