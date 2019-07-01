@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import CharacterDescriptionPanel from "../components/components/nameplate/nameplate"
 import CharacteristicDescriptionPanel from "../components/components/characteristics/characteristics"
 import SEO from "../components/seo"
-//import Image from "../components/image"
+import AbilityDie from "../components/images/ability"
 
 const CenteredHeaderMeta = { style: { textAlign: `center`, fontWeight: `500`, textDecoration: `underline` } }
 
@@ -32,17 +32,21 @@ const IndexPage = () => (
         <thead>
           <tr>
             <th>Skill</th>
+            <th>Characteristic</th>
             <th>Carrer</th>
             <th>Roll</th>
             <th>Rank</th>
+            <th>Notes</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Astrogation (Int)</td>
+            <td>Astrogation</td>
+            <td>Intelligence</td>
             <td>No</td>
             <td>2g</td>
             <td>1</td>
+            <td></td>
           </tr>
           {/*Add dynamically populating json list here*/}
         </tbody>
@@ -66,7 +70,7 @@ const IndexPage = () => (
         <tbody>
           <tr>
             <td>Blaster Pistol</td>
-            <td>2g</td>
+            <td><div className="row"><div className="two columns"><AbilityDie /></div><div className="two columns"><AbilityDie /></div></div></td>
             <td>5</td>
             <td>Medium</td>
             <td>2 adv</td>
