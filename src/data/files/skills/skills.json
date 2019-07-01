@@ -1,0 +1,70 @@
+{
+    "generalSkills": [
+        {
+            "name": "Astrogation"
+        },
+        {
+            "name": "Athletics"
+        },
+        {
+            "name": "Charm"
+        },
+        {
+            "name": "Coercion"
+        },
+        {
+            "name": "Computers"
+        },
+        {
+            "name": "Cool"
+        },
+        {
+            "name": "Coordination"
+        },
+        {
+            "name": "Deception"
+        },
+        {
+            "name": "Discipline"
+        },
+        {
+            "name": "Leadership"
+        },
+        {
+            "name": "Mechanics"
+        },
+        {
+            "name": "Medicine"
+        },
+        {
+            "name": "Negotiation"
+        },
+        {
+            "name": "Perception"
+        },
+        {
+            "name": "Piloting - Planetary"
+        },
+        {
+            "name": "Piloting - Space"
+        },
+        {
+            "name": "Resilience"
+        },
+        {
+            "name": "Skulduggery"
+        },
+        {
+            "name": "Stealth"
+        },
+        {
+            "name": "Streetwise"
+        },
+        {
+            "name": "Survival"
+        },
+        {
+            "name": "Vigilance"
+        }
+    ]
+}
