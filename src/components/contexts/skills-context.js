@@ -87,7 +87,7 @@ const reducer = (state, action) => {
         case CHANGE_SURVIVAL:
         case CHANGE_VIGILANCE:
             if (action.raw) {
-                initialState[action.raw] = action.value
+                newState[action.raw] = action.value
             }
             break;
         default:
