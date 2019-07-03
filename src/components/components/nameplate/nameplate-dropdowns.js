@@ -15,15 +15,15 @@ export const SpeciesDropdown = () => {
     const species = useSpecies()
 
     species.sort((a, b) => {
-        return sort(a.node.name.toLowerCase(), b.node.name.toLowerCase())
+        return sort(a.name.toLowerCase(), b.name.toLowerCase())
     })
 
     const nodes = new Map()
     const options = []
 
     species.forEach(element => {
-        nodes.set(element.node.name, element.node)
-        options.push(<option key={element.node.name} value={element.node.name}>{element.node.name}</option>)
+        nodes.set(element.name, element)
+        options.push(<option key={element.name} value={element.name}>{element.name}</option>)
     });
 
     return (
@@ -40,15 +40,15 @@ export const CareerDropdown = () => {
     const carrers = useCareers()
 
     carrers.sort((a, b) => {
-        return sort(a.node.career.toLowerCase(), b.node.career.toLowerCase())
+        return sort(a.career.toLowerCase(), b.career.toLowerCase())
     })
 
     const nodes = new Map()
     const options = []
 
     carrers.forEach(element => {
-        nodes.set(element.node.career, element.node)
-        options.push(<option key={element.node.career} value={element.node.career}>{element.node.career}</option>)
+        nodes.set(element.career, element)
+        options.push(<option key={element.career} value={element.career}>{element.career}</option>)
     });
 
     return (

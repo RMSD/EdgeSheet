@@ -1,70 +1,92 @@
 {
     "generalSkills": [
         {
-            "name": "Astrogation"
+            "name": "Astrogation",
+            "characteristic": "Intelligence"
         },
         {
-            "name": "Athletics"
+            "name": "Athletics",
+            "characteristic": "Brawn"
         },
         {
-            "name": "Charm"
+            "name": "Charm",
+            "characteristic": "Presence"
         },
         {
-            "name": "Coercion"
+            "name": "Coercion",
+            "characteristic": "Willpower"
         },
         {
-            "name": "Computers"
+            "name": "Computers",
+            "characteristic": "Intelligence"
         },
         {
-            "name": "Cool"
+            "name": "Cool",
+            "characteristic": "Presence"
         },
         {
-            "name": "Coordination"
+            "name": "Coordination",
+            "characteristic": "Agility"
         },
         {
-            "name": "Deception"
+            "name": "Deception",
+            "characteristic": "Cunning"
         },
         {
-            "name": "Discipline"
+            "name": "Discipline",
+            "characteristic": "Willpower"
         },
         {
-            "name": "Leadership"
+            "name": "Leadership",
+            "characteristic": "Presence"
         },
         {
-            "name": "Mechanics"
+            "name": "Mechanics",
+            "characteristic": "Intelligence"
         },
         {
-            "name": "Medicine"
+            "name": "Medicine",
+            "characteristic": "Intelligence"
         },
         {
-            "name": "Negotiation"
+            "name": "Negotiation",
+            "characteristic": "Presence"
         },
         {
-            "name": "Perception"
+            "name": "Perception",
+            "characteristic": "Cunning"
         },
         {
-            "name": "Piloting - Planetary"
+            "name": "Piloting - Planetary",
+            "characteristic": "Agility"
         },
         {
-            "name": "Piloting - Space"
+            "name": "Piloting - Space",
+            "characteristic": "Agility"
         },
         {
-            "name": "Resilience"
+            "name": "Resilience",
+            "characteristic": "Brawn"
         },
         {
-            "name": "Skulduggery"
+            "name": "Skulduggery",
+            "characteristic": "Cunning"
         },
         {
-            "name": "Stealth"
+            "name": "Stealth",
+            "characteristic": "Agility"
         },
         {
-            "name": "Streetwise"
+            "name": "Streetwise",
+            "characteristic": "Cunning"
         },
         {
-            "name": "Survival"
+            "name": "Survival",
+            "characteristic": "Cunning"
         },
         {
-            "name": "Vigilance"
+            "name": "Vigilance",
+            "characteristic": "Willpwer"
         }
     ]
 }

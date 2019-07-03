@@ -4,18 +4,16 @@ export const useCareers = () => {
   const careers = useStaticQuery(
     graphql`query MyCareers {
       allCareersJson {
-        edges {
-          node {
-            career
-            careerSkills
-            specializations {
-              name
-              bonusSkills
-              sourceBook
-            }
+        nodes {
+          career
+          careerSkills
+          specializations {
+            bonusSkills
+            name
+            sourceBook
           }
         }
       }
     }`)
-  return careers.allCareersJson.edges
+  return careers.allCareersJson.nodes
 }

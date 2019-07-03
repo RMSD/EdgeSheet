@@ -1,4 +1,4 @@
-import React, { useReducer } from react
+import React, { useReducer } from "react"
 
 /* Actions */
 export const CHANGE_ASTROGATION = 'CHANGE_ASTROGATION'

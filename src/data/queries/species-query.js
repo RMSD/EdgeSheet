@@ -4,22 +4,21 @@ export const useSpecies = () => {
     const careers = useStaticQuery(
       graphql`query MySpecies {
         allSpeciesJson {
-          edges {
-            node {
-              name
-              baseCharacterstics {
-                key
-                value
-              }
-              baseWounds
-              woundCharacterstic
-              baseStrain
-              strainCharacterstic
-              speciesFeat
-              sourceBook
+          nodes {
+            baseCharacterstics {
+              key
+              value
             }
+            baseStrain
+            baseWounds
+            name
+            sourceBook
+            speciesFeat
+            strainCharacterstic
+            woundCharacterstic
           }
         }
-      }`)
-    return careers.allSpeciesJson.edges
+      }
+      `)
+    return careers.allSpeciesJson.nodes
   }

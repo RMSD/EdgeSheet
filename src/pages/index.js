@@ -6,6 +6,7 @@ import CharacterDescriptionPanel from "../components/components/nameplate/namepl
 import CharacteristicDescriptionPanel from "../components/components/characteristics/characteristics"
 import SEO from "../components/seo"
 import AbilityDie from "../components/images/ability"
+import SkillTable from "../components/components/skills/skills"
 
 const CenteredHeaderMeta = { style: { textAlign: `center`, fontWeight: `500`, textDecoration: `underline` } }
 
@@ -28,29 +29,8 @@ const IndexPage = () => (
       <br />
 
       <h6 {...CenteredHeaderMeta}>Skills</h6>
-      <table className="u-full-width" description="Character Skills">
-        <thead>
-          <tr>
-            <th>Skill</th>
-            <th>Characteristic</th>
-            <th>Carrer</th>
-            <th>Roll</th>
-            <th>Rank</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Astrogation</td>
-            <td>Intelligence</td>
-            <td>No</td>
-            <td>2g</td>
-            <td>1</td>
-            <td></td>
-          </tr>
-          {/*Add dynamically populating json list here*/}
-        </tbody>
-      </table>
+      <SkillTable />
+
 
       <br />
       <br />
