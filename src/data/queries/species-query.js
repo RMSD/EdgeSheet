@@ -1,8 +1,8 @@
 import { useStaticQuery, graphql } from "gatsby"
 
 export const useSpecies = () => {
-    const careers = useStaticQuery(
-      graphql`query MySpecies {
+  const careers = useStaticQuery(
+    graphql`query MySpecies {
         allSpeciesJson {
           nodes {
             baseCharacterstics {
@@ -20,5 +20,5 @@ export const useSpecies = () => {
         }
       }
       `)
-    return careers.allSpeciesJson.nodes
-  }
+  return careers.allSpeciesJson.nodes
+}

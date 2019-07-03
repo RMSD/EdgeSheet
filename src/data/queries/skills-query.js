@@ -1,8 +1,8 @@
 import { useStaticQuery, graphql } from "gatsby"
 
 export const useCareers = () => {
-  const skills = useStaticQuery(
-    graphql`query MySkills {
+    const skills = useStaticQuery(
+        graphql`query MySkills {
         allSkillsJson {
             nodes {
               generalSkills {
@@ -12,5 +12,5 @@ export const useCareers = () => {
             }
           }
         }`)
-  return skills.allSkillsJson.nodes
+    return skills.allSkillsJson.nodes
 }
