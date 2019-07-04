@@ -81,7 +81,7 @@ const SkillTable = () => {
         <tr>
           <th>Skill</th>
           <th>Characteristic</th>
-          <th>Carrer</th>
+          <th>Career</th>
           <th>Roll</th>
           <th>Rank</th>
         </tr>
