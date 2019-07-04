@@ -1,0 +1,1 @@
+{"errors":[{"message":"Cannot query field \"generalSkills\" on type \"SkillsJson\".","locations":[{"line":4,"column":7}]}]}
