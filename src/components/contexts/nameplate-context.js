@@ -23,7 +23,7 @@ const initialState = {
             value: 2
         },
         {
-            key: "Intellect",
+            key: "Intelligence",
             value: 2
         },
         {

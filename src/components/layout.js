@@ -14,6 +14,7 @@ import "./css/skeleton.css"
 import "./css/normalize.css"
 import NameplateStateWrapper from "./contexts/nameplate-context";
 import CharacteristicStateWrapper from "./contexts/characteristic-context";
+import SkillStateWrapper from "./contexts/skills-context";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -31,7 +32,9 @@ const Layout = ({ children }) => (
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <NameplateStateWrapper>
           <CharacteristicStateWrapper>
-            <main>{children}</main>
+            <SkillStateWrapper>
+              <main>{children}</main>
+            </SkillStateWrapper>
           </CharacteristicStateWrapper>
         </NameplateStateWrapper>
         <br />

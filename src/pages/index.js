@@ -56,6 +56,14 @@ const IndexPage = () => (
             <td>2 adv</td>
             <td></td>
           </tr>
+          <tr>
+            <td>To be Implemented</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
           {/*Add dynamically populating json list here*/}
         </tbody>
       </table>

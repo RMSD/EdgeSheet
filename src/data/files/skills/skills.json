@@ -128,7 +128,7 @@
     {
         "key": "vigilance",
         "name": "Vigilance",
-        "characteristic": "Willpwer",
+        "characteristic": "Willpower",
         "isCombat": false
     }
 ]
