@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/EdgeSheet",
+  pathPrefix: "/EdgeSheet/",
   siteMetadata: {
     title: `FFG Star Wars Character Sheet Builder`,
     description: `Build character sheets for all the FFG Star Wars RPGs.`,
