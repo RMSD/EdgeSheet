@@ -1,4 +1,4 @@
-# Edge Sheets: FFG Star Wars RPGCharacter generator
+# Edge Sheets: FFG Star Wars RPG Character generator
 
 ## Local Development
 
