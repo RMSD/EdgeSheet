@@ -2,119 +2,41 @@ import React from "react"
 // import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-//import Image from "../components/image"
+import CharacterDescriptionPanel from "../components/components/nameplate/nameplate"
+import CharacteristicDescriptionPanel from "../components/components/characteristics/characteristics"
 import SEO from "../components/seo"
+import AbilityDie from "../components/images/ability"
+import SkillTable from "../components/components/skills/skills"
 
-const CenteredHeaderMeta = { style: { textAlign: `center`,  fontWeight: `500`, textDecoration: `underline`, paddingRight: `200px` } }
-const rowItemPadding = { padding: `0px 50px 0px 50px` }
+const CenteredHeaderMeta = { style: { textAlign: `center`, fontWeight: `500`, textDecoration: `underline` } }
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div className="container">
       <br />
-      <div className="row" description="Character Information">
-        <div className="three columns">
-          <strong>Character Name</strong>
-          <br />
-          <em>Default Name</em>
-        </div>
-        <div className="three columns">
-          <strong>Species</strong>
-          <p>Human</p>
-        </div>
-        <div className="three columns">
-          <strong>Carrer</strong>
-          <p>Smuggler</p>
-        </div>
-        <div className="three columns">
-          <strong>Specialization Trees</strong>
-          <p>Gunslinger</p>
-        </div>
-      </div>
-
       <br />
 
-      <div className="row">
-        <div className="three columns">
-          <strong>Soak</strong>
-          <p>0</p>
-        </div>
-        <div className="three columns">
-          <strong>Wounds Maximum</strong>
-          <p>10</p>
-        </div>
-        <div className="three columns">
-          <strong>Strain Maximum</strong>
-          <p>10</p>
-        </div>
-        <div className="three columns">
-          <strong>Defense Maximum</strong>
-          <p>0</p>
-        </div>
-      </div>
+      <CharacterDescriptionPanel />
 
+      <br />
       <br />
 
       <h6 {...CenteredHeaderMeta}>Character Characteristics</h6>
-      <div className="row" description="Character Characteristics" style={{ paddingLeft: `10px` }}>
-        <div className="one columns" style={rowItemPadding}>
-          <strong>Brawn</strong>
-          <p>1</p>
-        </div>
-        <div className="one columns" style={rowItemPadding}>
-          <strong>Agility</strong>
-          <p>1</p>
-        </div>
-        <div className="one columns" style={rowItemPadding}>
-          <strong>Intellect</strong>
-          <p>1</p>
-        </div>
-        <div className="one columns" style={rowItemPadding}>
-          <strong>Cunning</strong>
-          <p>1</p>
-        </div>
-        <div className="one columns" style={rowItemPadding}>
-          <strong>Willpower</strong>
-          <p>1</p>
-        </div>
-        <div className="one columns" style={rowItemPadding}>
-          <strong>Presence</strong>
-          <p>1</p>
-        </div>
-        <div className="one columns" description="Force, is conditional..." style={rowItemPadding}>
-          <strong>Force</strong>
-          <p>1</p>
-        </div>
-      </div>
+      <CharacteristicDescriptionPanel />
 
+      <br />
       <br />
 
       <h6 {...CenteredHeaderMeta}>Skills</h6>
-      <table class="u-full-width" description="Character Skills">
-        <thead>
-          <tr>
-            <th>Skill</th>
-            <th>Carrer</th>
-            <th>Roll</th>
-            <th>Rank</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Astrogation (Int)</td>
-            <td>No</td>
-            <td>2g</td>
-            <td>1</td>
-          </tr>
-          {/*Add dynamically populating json list here*/}
-        </tbody>
-      </table>
+      <SkillTable />
 
+
+      <br />
       <br />
 
       <h6 {...CenteredHeaderMeta}>Weapons</h6>
-      <table class="u-full-width" description="Character Weapons">
+      <table className="u-full-width" description="Character Weapons">
         <thead>
           <tr>
             <th>Weapon</th>
@@ -128,16 +50,25 @@ const IndexPage = () => (
         <tbody>
           <tr>
             <td>Blaster Pistol</td>
-            <td>2g</td>
+            <td><div className="row"><div className="two columns"><AbilityDie /></div><div className="two columns"><AbilityDie /></div></div></td>
             <td>5</td>
             <td>Medium</td>
             <td>2 adv</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>To be Implemented</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td></td>
           </tr>
           {/*Add dynamically populating json list here*/}
         </tbody>
       </table>
 
+      <br />
       <br />
 
       <div className="row">

@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `FFG Star Wars Character Sheet Builder`,
     description: `Build character sheets for all the FFG Star Wars RPGs.`,
-    author: `@Living_Target`,
+    author: `@Living_Target (Twitter)/@RMSD (Github)`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,7 +25,14 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/Chiss_Ascendancy.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data/files/`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

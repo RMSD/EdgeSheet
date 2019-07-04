@@ -1,0 +1,15 @@
+{
+    "career": "Smuggler",
+    "careerSkills": ["Coordination", "Deception", "Knowledge (Underworld)", "Perception", "Piloting (Space)", "Skulduggery", "Streetwise", "Vigilance"],
+    "specializations": [
+        {
+            "name": "Pilot",
+            "bonusSkills": ["Charm", "Cool", "Deception", "Ranged (Light)"],
+            "sourceBook": "Edge of the Empire Source Book P."
+        }, {
+            "name": "Gunslinger",
+            "bonusSkills": ["Coercion", "Cool", "Knowledge (Outer Rim)", "Ranged (Light)"],
+            "sourceBook": "Fly Casual Source Book P."
+        }
+    ]
+}
