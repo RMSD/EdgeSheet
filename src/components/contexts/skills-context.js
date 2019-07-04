@@ -1,29 +1,5 @@
 import React, { useReducer } from "react"
 
-/* Actions */
-export const CHANGE_ASTROGATION = 'CHANGE_ASTROGATION'
-export const CHANGE_ATHLETICS = 'CHANGE_ATHLETICS'
-export const CHANGE_CHARM = 'CHANGE_CHARM'
-export const CHANGE_COERCION = 'CHANGE_COERCION'
-export const CHANGE_COMPUTERS = 'CHANGE_COMPUTERS'
-export const CHANGE_COOL = 'CHANGE_COOL'
-export const CHANGE_COORDINATION = 'CHANGE_COORDINATION'
-export const CHANGE_DECEPTION = 'CHANGE_DECEPTION'
-export const CHANGE_DISCIPLINE = 'CHANGE_DISCIPLINE'
-export const CHANGE_LEADERSHIP = 'CHANGE_LEADERSHIP'
-export const CHANGE_MECHANICS = 'CHANGE_MECHANICS'
-export const CHANGE_MEDICINE = 'CHANGE_MEDICINE'
-export const CHANGE_NEGOTIATION = 'CHANGE_NEGOTIATION'
-export const CHANGE_PERCEPTION = 'CHANGE_PERCEPTION'
-export const CHANGE_PILOTINGPLANETARY = 'CHANGE_PILOTINGPLANETARY'
-export const CHANGE_PILOTINGSPACE = 'CHANGE_PILOTINGSPACE'
-export const CHANGE_RESILIENCE = 'CHANGE_RESILIENCE'
-export const CHANGE_SKULDUGGERY = 'CHANGE_SKULDUGGERY'
-export const CHANGE_STEALTH = 'CHANGE_STEALTH'
-export const CHANGE_STREETWISE = 'CHANGE_STREETWISE'
-export const CHANGE_SURVIVAL = 'CHANGE_SURVIVAL'
-export const CHANGE_VIGILANCE = 'CHANGE_VIGILANCE'
-
 /* State Setup */
 export const SkillState = React.createContext({});
 export const DispatchSkill = React.createContext(() => null);
@@ -59,39 +35,12 @@ const reducer = (state, action) => {
 
     if (Number.isNaN(action.value) || action.value < 0) {
         action.value = 0
-    } else if  (action.value > 5) {
+    } else if (action.value > 5) {
         action.value = 5
     }
 
-    switch (action.type) {
-        case CHANGE_ASTROGATION:
-        case CHANGE_ATHLETICS:
-        case CHANGE_CHARM:
-        case CHANGE_COERCION:
-        case CHANGE_COMPUTERS:
-        case CHANGE_COOL:
-        case CHANGE_COORDINATION:
-        case CHANGE_DECEPTION:
-        case CHANGE_DISCIPLINE:
-        case CHANGE_LEADERSHIP:
-        case CHANGE_MECHANICS:
-        case CHANGE_MEDICINE:
-        case CHANGE_NEGOTIATION:
-        case CHANGE_PERCEPTION:
-        case CHANGE_PILOTINGPLANETARY:
-        case CHANGE_PILOTINGSPACE:
-        case CHANGE_RESILIENCE:
-        case CHANGE_SKULDUGGERY:
-        case CHANGE_STEALTH:
-        case CHANGE_STREETWISE:
-        case CHANGE_SURVIVAL:
-        case CHANGE_VIGILANCE:
-            if (action.raw) {
-                newState[action.raw] = action.value
-            }
-            break;
-        default:
-            break;
+    if (action.type) {
+        newState[action.type] = action.value
     }
 
     return newState
