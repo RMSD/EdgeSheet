@@ -28,7 +28,7 @@ const Layout = ({ children }) => (
     <br />
     <div className="container">
       <footer>
-        © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+        © {new Date().getFullYear()}. Questions? Find me <a hraf="https://twitter.com/Living_Target">@Living_Target</a>. Have an issue, request, want to contibute? <a href="https://github.com/RMSD/EdgeSheet">Github</a>. Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>
     </div>
   </>

@@ -12,7 +12,7 @@ const CenteredHeaderMeta = { style: { textAlign: `center`, fontWeight: `500`, te
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" keywords={[`gatsby`, `application`, `react`, `Star`, `Wars`, `Edge`, `Empire`, `Age`, `Rebellion`, `Force`, `Destiny`, `Character`, `Sheet`, `Creation`]} />
     <div className="container">
       <br />
       <br />
