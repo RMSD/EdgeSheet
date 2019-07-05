@@ -3,7 +3,7 @@ import React, { useReducer } from "react"
 /* Actions */
 export const CHANGE_BRAWN = 'CHANGE_BRAWN'
 export const CHANGE_AGILITY = 'CHANGE_AGILITY'
-export const CHANGE_Intelligence = 'CHANGE_Intelligence'
+export const CHANGE_INTELLIGENCE = 'CHANGE_INTELLIGENCE'
 export const CHANGE_CUNNING = 'CHANGE_CUNNING'
 export const CHANGE_WILLPOWER = 'CHANGE_WILLPOWER'
 export const CHANGE_PRESENCE = 'CHANGE_PRESENCE'
@@ -35,10 +35,6 @@ const reducer = (state, action) => {
         action.value = 0
     }
 
-
-
-    console.log(action)
-
     switch (action.type) {
         case CHANGE_BRAWN:
             newState.additionalBrawn = action.value;
@@ -46,7 +42,7 @@ const reducer = (state, action) => {
         case CHANGE_AGILITY:
             newState.additionalAgility = action.value;
             break;
-        case CHANGE_Intelligence:
+        case CHANGE_INTELLIGENCE:
             newState.additionalIntelligence = action.value;
             break;
         case CHANGE_CUNNING:
