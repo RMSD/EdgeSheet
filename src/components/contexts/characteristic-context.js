@@ -10,21 +10,32 @@ export const CHANGE_PRESENCE = 'CHANGE_PRESENCE'
 export const CHANGE_SOAK = 'CHANGE_SOAK'
 export const CHANGE_MELEEDEF = 'CHANGE_MELEEDEF'
 export const CHANGE_RANGEDDEF = 'CHANGE_RANGEDDEF'
+export const CHANGE_BASE = 'CHANGE_BASE'
 
 /* State Setup */
 export const CharState = React.createContext({});
 export const DispatchChar = React.createContext(() => null);
 
 const initialState = {
+    baseBrawn: 2,
     additionalBrawn: 0,
+    baseAgility: 2,
     additionalAgility: 0,
+    baseIntelligence: 2,
     additionalIntelligence: 0,
+    baseCunning: 2,
     additionalCunning: 0,
+    baseWillpower: 2,
     additionalWillpower: 0,
+    basePresence: 2,
     additionalPresence: 0,
     soak: 0,
     defenseMelee: 0,
-    defenseRanged: 0
+    defenseRanged: 0,
+    baseWounds: 10,
+    woundCharacterstic: "Brawn",
+    baseStrain: 10,
+    strainCharacterstic: "Willpower"
 };
 
 /* Reducer */
@@ -63,6 +74,17 @@ const reducer = (state, action) => {
         case CHANGE_RANGEDDEF:
             newState.defenseRanged = action.value;
             break;
+        case CHANGE_BASE:
+            newState.baseBrawn = action.brawn
+            newState.baseAgility = action.agility
+            newState.baseIntelligence = action.intellence
+            newState.baseCunning = action.cunning
+            newState.baseWillpower = action.willpower
+            newState.basePresence = action.presence
+            newState.baseWounds = action.wounds
+            newState.baseStrain = action.strain
+            newState.woundCharacterstic = action.woundCharacterstic
+            newState.strainCharacterstic = action.strainCharacterstic
         default:
             break;
     }
