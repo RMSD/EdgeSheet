@@ -5,51 +5,97 @@ export const SkillState = React.createContext({});
 export const DispatchSkill = React.createContext(() => null);
 
 const initialState = {
-    astrogation: 0,
-    isAstrogationCareer: false,
-    athletics: 0,
-    isAthleticsCareer: false,
-    charm: 0,
-    isCharmCareer: false,
-    coercion: 0,
-    isCoercionCareer: false,
-    computers: 0,
-    isComputesCareer: false,
-    cool: 0,
-    isCoolCareer: false,
-    coordination: 0,
-    isCoordinationCareer: false,
-    deception: 0,
-    isDeceptionCareer: false,
-    discipline: 0,
-    isDisciplineCareer: false,
-    leadership: 0,
-    isLeadershipCareer: false,
-    mechanics: 0,
-    isMechanicsCareer: false,
-    medicine: 0,
-    isMedicineCareer: false,
-    negotiation: 0,
-    isNegotiationCareer: false,
-    perception: 0,
-    isPerceptionCareer: false,
-    pilotingPlanetary: 0,
-    isPilotingPlanetaryCareer: false,
-    pilotingSpace: 0,
-    isPilotingSpaceCareer: false,
-    resilience: 0,
-    isResilienceCareer: false,
-    skulduggery: 0,
-    isSkulduggeryCareer: false,
-    stealth: 0,
-    isStealthCareer: false,
-    streetwise: 0,
-    isStreetwiseCareer: false,
-    survival: 0,
-    isSurvivalCareer: false,
-    vigilance: 0,
-    isVigilanceCareer: false,
-    bonusSkills: ["Melee", "Ranged (Heavy)", "Skulduggery", "Stealth"]
+    generalSkills: {
+        "astrogation": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "athletics": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "charm": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "coercion": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "computers": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "cool": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "coordination": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "deception": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "discipline": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "leadership": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "mechanics": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "medicine": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "negotiation": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "perception": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "pilotingPlanetary": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "pilotingSpace": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "resilience": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "skulduggery": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "stealth": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "streetwise": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "survival": {
+            skill: 0,
+            isCarrer: false,
+        },
+        "vigilance": {
+            skill: 0,
+            isCarrer: false,
+        }
+    },
+    bonusSkills: ["Melee", "rangedHeavy", "Skulduggery", "Stealth"]
 };
 
 /* Reducer */
