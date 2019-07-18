@@ -75,14 +75,12 @@ const reducer = (state, action) => {
             newState.defenseRanged = action.value;
             break;
         case CHANGE_BASE:
-            newState.baseBrawn = action.brawn
-            newState.baseAgility = action.agility
-            newState.baseIntelligence = action.intellence
-            newState.baseCunning = action.cunning
-            newState.baseWillpower = action.willpower
-            newState.basePresence = action.presence
-            newState.baseWounds = action.wounds
-            newState.baseStrain = action.strain
+            action.baseCharacterstics.forEach(element => {
+                newState["base" + element.key] = element.value
+                
+            });
+            newState.baseWounds = action.baseWounds
+            newState.baseStrain = action.baseStrain
             newState.woundCharacterstic = action.woundCharacterstic
             newState.strainCharacterstic = action.strainCharacterstic
         default:

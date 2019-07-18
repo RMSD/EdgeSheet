@@ -1,103 +1,114 @@
 import React, { useReducer } from "react"
 
+/* Actions */
+export const CHANGE_BASE = 'CHANGE_BASE'
+export const CHANGE_BONUS = 'CHANGE_BONUS'
+
 /* State Setup */
 export const SkillState = React.createContext({});
 export const DispatchSkill = React.createContext(() => null);
 
 const initialState = {
     generalSkills: {
-        "astrogation": {
+        "Astrogation": {
             skill: 0,
             isCarrer: false,
         },
-        "athletics": {
+        "Athletics": {
             skill: 0,
             isCarrer: false,
         },
-        "charm": {
+        "Charm": {
             skill: 0,
             isCarrer: false,
         },
-        "coercion": {
+        "Coercion": {
             skill: 0,
             isCarrer: false,
         },
-        "computers": {
+        "Computers": {
             skill: 0,
             isCarrer: false,
         },
-        "cool": {
+        "Cool": {
             skill: 0,
             isCarrer: false,
         },
-        "coordination": {
+        "Coordination": {
             skill: 0,
             isCarrer: false,
         },
-        "deception": {
+        "Deception": {
             skill: 0,
             isCarrer: false,
         },
-        "discipline": {
+        "Discipline": {
             skill: 0,
             isCarrer: false,
         },
-        "leadership": {
+        "Leadership": {
             skill: 0,
             isCarrer: false,
         },
-        "mechanics": {
+        "Mechanics": {
             skill: 0,
             isCarrer: false,
         },
-        "medicine": {
+        "Medicine": {
             skill: 0,
             isCarrer: false,
         },
-        "negotiation": {
+        "Negotiation": {
             skill: 0,
             isCarrer: false,
         },
-        "perception": {
+        "Perception": {
             skill: 0,
             isCarrer: false,
         },
-        "pilotingPlanetary": {
+        "Piloting (Planetary)": {
             skill: 0,
             isCarrer: false,
         },
-        "pilotingSpace": {
+        "Piloting (Space)": {
             skill: 0,
             isCarrer: false,
         },
-        "resilience": {
+        "Resilience": {
             skill: 0,
             isCarrer: false,
         },
-        "skulduggery": {
+        "Skulduggery": {
             skill: 0,
             isCarrer: false,
         },
-        "stealth": {
+        "Stealth": {
             skill: 0,
             isCarrer: false,
         },
-        "streetwise": {
+        "Streetwise": {
             skill: 0,
             isCarrer: false,
         },
-        "survival": {
+        "Survival": {
             skill: 0,
             isCarrer: false,
         },
-        "vigilance": {
+        "Vigilance": {
             skill: 0,
             isCarrer: false,
         }
     },
-    bonusSkills: ["Melee", "rangedHeavy", "Skulduggery", "Stealth"]
+    bonusSkills: ["Melee", "Ranged (Heavy)", "Skulduggery", "Stealth"],
+    activeBonusSkills: 0
 };
-
+const setCarrer = (value, key, skillList) => {
+    if (skillList.includes(key)) {
+        value.isCarrer = true;
+    } else {
+        value.isCarrer = false
+    }
+}
 /* Reducer */
 const reducer = (state, action) => {
     const newState = Object.assign({}, state)
@@ -108,7 +119,19 @@ const reducer = (state, action) => {
         action.value = 5
     }
 
-    if (action.type) {
+    if (action.type === CHANGE_BASE) {
+        newState.generalSkills.forEach((value, key, _map) => setCarrer(value, key, action.value));
+        // set other skill types here
+        newState.bonusSkills = action.bonusSkills
+        newState.activeBonusSkills = 0
+    } if (action.type === CHANGE_BONUS) {
+        let skill = newState.generalSkills.get(action.value)
+        // test other skill types here
+        if (typeof myVar !== 'undefined') {
+            skill.isCarrer = action.carrerState;
+            newState.activeBonusSkills = skill.isCarrer == true ? newState.activeBonusSkills++ : newState.activeBonusSkills--
+        }
+    } else if (action.type) {
         newState[action.type] = action.value
     }
 

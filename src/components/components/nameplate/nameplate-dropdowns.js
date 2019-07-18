@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { NameplateState, DispatchNamePlate, CHANGE_SPECIES, CHANGE_CAREER, CHANGE_SPECIALIZATION } from "../../contexts/nameplate-context"
+import { DispatchChar, CHANGE_BASE } from "../../contexts/characteristic-context"
 import { useCareers } from "../../../data/queries/career-query"
 import { useSpecies } from "../../../data/queries/species-query"
 
@@ -12,6 +13,7 @@ const sort = (x, y) => {
 export const SpeciesDropdown = () => {
     const state = useContext(NameplateState);
     const dispatch = useContext(DispatchNamePlate);
+    const dispatchChar = useContext(DispatchChar);
     const species = useSpecies()
 
     species.sort((a, b) => {
@@ -28,7 +30,10 @@ export const SpeciesDropdown = () => {
 
     return (
         <select className="u-full-width" id="SpeciesSelector" value={state.species.name}
-            onChange={(event) => dispatch({ type: CHANGE_SPECIES, value: nodes.get(event.target.value) })}>
+            onChange={(event) => {
+                dispatch({ type: CHANGE_SPECIES, value: event.target.value })
+                dispatchChar(objects.assign({ type: CHANGE_BASE }, nodes.set(event.target.value)))
+            }}>
             {options}
         </select>
     )
