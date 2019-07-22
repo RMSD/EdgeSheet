@@ -41,7 +41,6 @@ const DiceRender = (characteristicLevel, skillLevel) => {
 }
 
 const SkillTable = () => {
-  const nameState = useContext(NameplateState)
   const charState = useContext(CharState);
   const skillState = useContext(SkillState)
   const dispatch = useContext(DispatchSkill);
@@ -50,8 +49,7 @@ const SkillTable = () => {
   const generalSkillList = []
 
   skills.forEach(element => {
-    const value = nameState.species.baseCharacterstics.find(baseChars => baseChars.key === element.characteristic).value
-    const characteristic = value + charState['additional' + element.characteristic]
+    const characteristic = charState['base' + element.characteristic] + charState['additional' + element.characteristic]
 
     generalSkillList.push(
       <tr key={element.key}>

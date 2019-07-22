@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import { NameplateState, DispatchNamePlate, CHANGE_SPECIES, CHANGE_CAREER, CHANGE_SPECIALIZATION } from "../../contexts/nameplate-context"
 import { DispatchChar, CHANGE_BASE } from "../../contexts/characteristic-context"
+import { DispatchSkill, CHANGE_BASE_SKILLS } from "../../contexts/skills-context"
 import { useCareers } from "../../../data/queries/career-query"
 import { useSpecies } from "../../../data/queries/species-query"
 
@@ -42,6 +43,7 @@ export const SpeciesDropdown = () => {
 export const CareerDropdown = () => {
     const state = useContext(NameplateState);
     const dispatch = useContext(DispatchNamePlate);
+    const dispatchSkill = useContext(DispatchSkill)
     const carrers = useCareers()
 
     carrers.sort((a, b) => {
@@ -58,7 +60,11 @@ export const CareerDropdown = () => {
 
     return (
         <select className="u-full-width" id="ClassDropdown" value={state.career.career}
-            onChange={(event) => dispatch({ type: CHANGE_CAREER, value: nodes.get(event.target.value) })}>
+            onChange={(event) => {
+                const node = nodes.get(event.target.value);
+                dispatch({ type: CHANGE_CAREER, value: node })
+                dispatchSkill({ type: CHANGE_BASE_SKILLS, value: node.careerSkills, bonusSkills: node.specializations[0].bonusSkills })
+            }}>
             {options}
         </select>
     )
@@ -67,6 +73,7 @@ export const CareerDropdown = () => {
 export const SpecializationDropdown = () => {
     const state = useContext(NameplateState);
     const dispatch = useContext(DispatchNamePlate);
+    const dispatchSkill = useContext(DispatchSkill)
     const specializations = state.career.specializations
 
     const nodes = new Map()
@@ -82,8 +89,12 @@ export const SpecializationDropdown = () => {
     });
 
     return (
-        <select className="u-full-width" id="SpecializationDropdown" value={state.specialization.name}
-            onChange={(event) => dispatch({ type: CHANGE_SPECIALIZATION, value: nodes.get(event.target.value) })}>
+        <select className="u-full-width" id="SpecializationDropdown" value={state.specialization}
+            onChange={(event) => {
+                const node = nodes.get(event.target.value);
+                dispatch({ type: CHANGE_SPECIALIZATION, value: node.name })
+                dispatchSkill({ type: CHANGE_BASE_SKILLS, bonusSkills: node.bonusSkills })
+            }}>
             {options}
         </select>
     )

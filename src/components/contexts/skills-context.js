@@ -1,7 +1,7 @@
 import React, { useReducer } from "react"
 
 /* Actions */
-export const CHANGE_BASE = 'CHANGE_BASE'
+export const CHANGE_BASE_SKILLS = 'CHANGE_BASE_SKILLS'
 export const CHANGE_BONUS = 'CHANGE_BONUS'
 
 /* State Setup */
@@ -12,106 +12,106 @@ const initialState = {
     generalSkills: {
         "Astrogation": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Athletics": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Charm": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Coercion": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Computers": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Cool": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Coordination": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Deception": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Discipline": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Leadership": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Mechanics": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Medicine": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Negotiation": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Perception": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Piloting (Planetary)": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Piloting (Space)": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Resilience": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Skulduggery": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Stealth": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Streetwise": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Survival": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         },
         "Vigilance": {
             skill: 0,
-            isCarrer: false,
+            isCareer: false,
         }
     },
     bonusSkills: ["Melee", "Ranged (Heavy)", "Skulduggery", "Stealth"],
     activeBonusSkills: 0
 };
-const setCarrer = (value, key, skillList) => {
+const setCareer = (value, key, skillList) => {
     if (skillList.includes(key)) {
-        value.isCarrer = true;
+        value.isCareer = true;
     } else {
-        value.isCarrer = false
+        value.isCareer = false
     }
 }
 /* Reducer */
 const reducer = (state, action) => {
-    const newState = Object.assign({}, state)
+    var newState = Object.assign({}, state)
 
     if (Number.isNaN(action.value) || action.value < 0) {
         action.value = 0
@@ -119,17 +119,23 @@ const reducer = (state, action) => {
         action.value = 5
     }
 
-    if (action.type === CHANGE_BASE) {
-        newState.generalSkills.forEach((value, key, _map) => setCarrer(value, key, action.value));
+    if (action.type === CHANGE_BASE_SKILLS) {
+        if (typeof action.value !== 'undefined') {
+            newState = Object.assign({}, initialState)
+            newState.generalSkills.forEach((value, key, _map) => setCareer(value, key, action.value));
+        }
         // set other skill types here
-        newState.bonusSkills = action.bonusSkills
-        newState.activeBonusSkills = 0
-    } if (action.type === CHANGE_BONUS) {
+        if (typeof action.bonusSkills !== 'undefined') {
+            state.bonusSkills.forEach((skill) => newState.generalSkills.get(skill).isCareer = false)
+            newState.bonusSkills = action.bonusSkills
+            newState.activeBonusSkills = 0
+        }
+    } else if (action.type === CHANGE_BONUS) {
         let skill = newState.generalSkills.get(action.value)
         // test other skill types here
-        if (typeof myVar !== 'undefined') {
-            skill.isCarrer = action.carrerState;
-            newState.activeBonusSkills = skill.isCarrer == true ? newState.activeBonusSkills++ : newState.activeBonusSkills--
+        if (typeof skill !== 'undefined') {
+            skill.isCareer = action.careerState;
+            newState.activeBonusSkills = skill.isCareer == true ? newState.activeBonusSkills++ : newState.activeBonusSkills--
         }
     } else if (action.type) {
         newState[action.type] = action.value
