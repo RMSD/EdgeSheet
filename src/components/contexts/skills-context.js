@@ -9,96 +9,96 @@ export const SkillState = React.createContext({});
 export const DispatchSkill = React.createContext(() => null);
 
 const initialState = {
-    generalSkills: {
-        "Astrogation": {
+    generalSkills: new Map([
+        ["Astrogation", {
             skill: 0,
             isCareer: false,
-        },
-        "Athletics": {
+        }],
+        ["Athletics", {
             skill: 0,
             isCareer: false,
-        },
-        "Charm": {
+        }],
+        ["Charm", {
             skill: 0,
             isCareer: false,
-        },
-        "Coercion": {
+        }],
+        ["Coercion", {
             skill: 0,
             isCareer: false,
-        },
-        "Computers": {
+        }],
+        ["Computers", {
             skill: 0,
             isCareer: false,
-        },
-        "Cool": {
+        }],
+        ["Cool", {
             skill: 0,
             isCareer: false,
-        },
-        "Coordination": {
+        }],
+        ["Coordination", {
             skill: 0,
             isCareer: false,
-        },
-        "Deception": {
+        }],
+        ["Deception", {
             skill: 0,
             isCareer: false,
-        },
-        "Discipline": {
+        }],
+        ["Discipline", {
             skill: 0,
             isCareer: false,
-        },
-        "Leadership": {
+        }],
+        ["Leadership", {
             skill: 0,
             isCareer: false,
-        },
-        "Mechanics": {
+        }],
+        ["Mechanics", {
             skill: 0,
             isCareer: false,
-        },
-        "Medicine": {
+        }],
+        ["Medicine", {
             skill: 0,
             isCareer: false,
-        },
-        "Negotiation": {
+        }],
+        ["Negotiation", {
             skill: 0,
             isCareer: false,
-        },
-        "Perception": {
+        }],
+        ["Perception", {
             skill: 0,
             isCareer: false,
-        },
-        "Piloting (Planetary)": {
+        }],
+        ["Piloting (Planetary)", {
             skill: 0,
             isCareer: false,
-        },
-        "Piloting (Space)": {
+        }],
+        ["Piloting (Space)", {
             skill: 0,
             isCareer: false,
-        },
-        "Resilience": {
+        }],
+        ["Resilience", {
             skill: 0,
             isCareer: false,
-        },
-        "Skulduggery": {
+        }],
+        ["Skulduggery", {
             skill: 0,
             isCareer: false,
-        },
-        "Stealth": {
+        }],
+        ["Stealth", {
             skill: 0,
             isCareer: false,
-        },
-        "Streetwise": {
+        }],
+        ["Streetwise", {
             skill: 0,
             isCareer: false,
-        },
-        "Survival": {
+        }],
+        ["Survival", {
             skill: 0,
             isCareer: false,
-        },
-        "Vigilance": {
+        }],
+        ["Vigilance", {
             skill: 0,
             isCareer: false,
-        }
-    },
+        }]
+    ]),
     bonusSkills: ["Melee", "Ranged (Heavy)", "Skulduggery", "Stealth"],
     activeBonusSkills: 0
 };
@@ -126,7 +126,11 @@ const reducer = (state, action) => {
         }
         // set other skill types here
         if (typeof action.bonusSkills !== 'undefined') {
-            state.bonusSkills.forEach((skill) => newState.generalSkills.get(skill).isCareer = false)
+            state.bonusSkills.forEach((skill) => {
+                if (newState.generalSkills.get(skill)) {
+                    newState.generalSkills.get(skill).isCareer = false
+                }
+            })
             newState.bonusSkills = action.bonusSkills
             newState.activeBonusSkills = 0
         }
@@ -135,7 +139,7 @@ const reducer = (state, action) => {
         // test other skill types here
         if (typeof skill !== 'undefined') {
             skill.isCareer = action.careerState;
-            newState.activeBonusSkills = skill.isCareer == true ? newState.activeBonusSkills++ : newState.activeBonusSkills--
+            newState.activeBonusSkills = skill.isCareer === true ? newState.activeBonusSkills++ : newState.activeBonusSkills--
         }
     } else if (action.type) {
         newState[action.type] = action.value

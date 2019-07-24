@@ -83,6 +83,7 @@ const reducer = (state, action) => {
             newState.baseStrain = action.baseStrain
             newState.woundCharacterstic = action.woundCharacterstic
             newState.strainCharacterstic = action.strainCharacterstic
+            break;
         default:
             break;
     }

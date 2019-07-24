@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-import { NameplateState } from "../../contexts/nameplate-context"
 import { CharState } from "../../contexts/characteristic-context"
 import { SkillState, DispatchSkill } from "../../contexts/skills-context"
 
@@ -48,17 +47,22 @@ const SkillTable = () => {
 
   const generalSkillList = []
 
+  console.log(skillState)
   skills.forEach(element => {
     const characteristic = charState['base' + element.characteristic] + charState['additional' + element.characteristic]
+
+    const skill = skillState.generalSkills.get(element.name)
+    
+    console.log(skill)
 
     generalSkillList.push(
       <tr key={element.key}>
         <td>{element.name}</td>
         <td>{element.characteristic}</td>
         <td>No</td>
-        <td>{DiceRender(characteristic, skillState[element.key])}</td>
+        <td>{DiceRender(characteristic, skill.skill)}</td>
         <td>
-          <select className="u-full-width" id="rankSelector" value={skillState[element.key]}
+          <select className="u-full-width" id="rankSelector" value={skill.skill}
             onChange={(event) => dispatch({ type: element.key, value: event.target.value })}>
             <option value="0">0</option>
             <option value="1">1</option>

@@ -15,11 +15,11 @@ const CharacteristicDescriptionPanel = () => {
         const display = elementValueNumber + additionalValueNumber
 
         columns.push(
-            <div key={element.key} className="two columns">
-                <strong>{element.key}</strong>
+            <div key={element} className="two columns">
+                <strong>{element}</strong>
                 <p>{display}</p>
-                <input className="u-full-width" type="number" placeholder={"Extra " + element.key}
-                    onChange={(event) => dispatch({ type: "CHANGE_" + element.key.toUpperCase(), value: parseInt(event.target.value) })}
+                <input className="u-full-width" type="number" placeholder={"Extra " + element}
+                    onChange={(event) => dispatch({ type: "CHANGE_" + element.toUpperCase(), value: parseInt(event.target.value) })}
                     id="characterName" />
             </div>)
     });
@@ -27,7 +27,7 @@ const CharacteristicDescriptionPanel = () => {
     /* Gameplay Characteristics cals and JSX */
     const soak = state.soak
     const maxWounds = state.baseWounds + state["base" + state.woundCharacterstic] + state["additional" + state.woundCharacterstic]
-    const maxStrain = baseStrain + state["base" + state.strainCharacterstic] + state["additional" + state.strainCharacterstic]
+    const maxStrain = state.baseStrain + state["base" + state.strainCharacterstic] + state["additional" + state.strainCharacterstic]
     const meleeDef = state.defenseMelee
     const rangedDef = state.defenseRanged
 

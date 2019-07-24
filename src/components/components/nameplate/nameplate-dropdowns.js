@@ -33,7 +33,7 @@ export const SpeciesDropdown = () => {
         <select className="u-full-width" id="SpeciesSelector" value={state.species.name}
             onChange={(event) => {
                 dispatch({ type: CHANGE_SPECIES, value: event.target.value })
-                dispatchChar(objects.assign({ type: CHANGE_BASE }, nodes.set(event.target.value)))
+                dispatchChar(Object.assign({ type: CHANGE_BASE }, nodes.set(event.target.value)))
             }}>
             {options}
         </select>
