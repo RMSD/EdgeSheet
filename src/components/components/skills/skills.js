@@ -47,13 +47,10 @@ const SkillTable = () => {
 
   const generalSkillList = []
 
-  console.log(skillState)
   skills.forEach(element => {
     const characteristic = charState['base' + element.characteristic] + charState['additional' + element.characteristic]
 
     const skill = skillState.generalSkills.get(element.name)
-    
-    console.log(skill)
 
     generalSkillList.push(
       <tr key={element.name}>
