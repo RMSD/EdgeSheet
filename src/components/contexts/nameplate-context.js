@@ -12,39 +12,8 @@ export const DispatchNamePlate = React.createContext(() => null);
 
 const initialState = {
     name: "Default Name",
-    species: {
-        name: "Human",
-        baseCharacterstics: [{
-            key: "Brawn",
-            value: 2
-        },
-        {
-            key: "Agility",
-            value: 2
-        },
-        {
-            key: "Intelligence",
-            value: 2
-        },
-        {
-            key: "Cunning",
-            value: 2
-        },
-        {
-            key: "Willpower",
-            value: 2
-        },
-        {
-            key: "Presence",
-            value: 2
-        }],
-        baseWounds: 10,
-        woundCharacterstic: "Brawn",
-        baseStrain: 10,
-        strainCharacterstic: "Willpower",
-        speciesFeat: "1 rank in any 2 non-career skills",
-        sourceBook: "Edge of the Empire"
-    },
+    species: "Human",
+    sourceBook: "Edge of the Empire",
     career: {
         career: "Bounty Hunter",
         careerSkills: ["Athletics", "Brawl", "Perception", "Piloting (Planetary)", "Piloting (Space)", "Ranged (Heavy)", "Streetwise", "Vigilance"],
@@ -56,11 +25,7 @@ const initialState = {
             }
         ]
     },
-    specialization: {
-        name: "Assassin",
-        bonusSkills: ["Melee", "Ranged (Heavy)", "Skulduggery", "Stealth"],
-        sourceBook: "Edge of the Empire Source Book P."
-    }
+    specialization: "Assassin"
 };
 
 /* Reducer */

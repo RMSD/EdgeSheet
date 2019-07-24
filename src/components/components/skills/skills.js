@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-import { NameplateState } from "../../contexts/nameplate-context"
 import { CharState } from "../../contexts/characteristic-context"
 import { SkillState, DispatchSkill } from "../../contexts/skills-context"
 
@@ -41,7 +40,6 @@ const DiceRender = (characteristicLevel, skillLevel) => {
 }
 
 const SkillTable = () => {
-  const nameState = useContext(NameplateState)
   const charState = useContext(CharState);
   const skillState = useContext(SkillState)
   const dispatch = useContext(DispatchSkill);
@@ -50,18 +48,19 @@ const SkillTable = () => {
   const generalSkillList = []
 
   skills.forEach(element => {
-    const value = nameState.species.baseCharacterstics.find(baseChars => baseChars.key === element.characteristic).value
-    const characteristic = value + charState['additional' + element.characteristic]
+    const characteristic = charState['base' + element.characteristic] + charState['additional' + element.characteristic]
+
+    const skill = skillState.generalSkills.get(element.name)
 
     generalSkillList.push(
-      <tr key={element.key}>
+      <tr key={element.name}>
         <td>{element.name}</td>
         <td>{element.characteristic}</td>
         <td>No</td>
-        <td>{DiceRender(characteristic, skillState[element.key])}</td>
+        <td>{DiceRender(characteristic, skill.skill)}</td>
         <td>
-          <select className="u-full-width" id="rankSelector" value={skillState[element.key]}
-            onChange={(event) => dispatch({ type: element.key, value: event.target.value })}>
+          <select className="u-full-width" id="rankSelector" value={skill.skill}
+            onChange={(event) => dispatch({ type: element.name, value: event.target.value })}>
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>

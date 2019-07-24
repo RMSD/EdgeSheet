@@ -85,13 +85,13 @@
     },
     {
         "key": "pilotingPlanetary",
-        "name": "Piloting - Planetary",
+        "name": "Piloting (Planetary)",
         "characteristic": "Agility",
         "isCombat": false
     },
     {
         "key": "pilotingSpace",
-        "name": "Piloting - Space",
+        "name": "Piloting (Space)",
         "characteristic": "Agility",
         "isCombat": false
     },
