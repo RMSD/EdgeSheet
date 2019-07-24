@@ -56,14 +56,14 @@ const SkillTable = () => {
     console.log(skill)
 
     generalSkillList.push(
-      <tr key={element.key}>
+      <tr key={element.name}>
         <td>{element.name}</td>
         <td>{element.characteristic}</td>
         <td>No</td>
         <td>{DiceRender(characteristic, skill.skill)}</td>
         <td>
           <select className="u-full-width" id="rankSelector" value={skill.skill}
-            onChange={(event) => dispatch({ type: element.key, value: event.target.value })}>
+            onChange={(event) => dispatch({ type: element.name, value: event.target.value })}>
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>

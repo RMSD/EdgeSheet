@@ -142,7 +142,7 @@ const reducer = (state, action) => {
             newState.activeBonusSkills = skill.isCareer === true ? newState.activeBonusSkills++ : newState.activeBonusSkills--
         }
     } else if (action.type) {
-        newState[action.type] = action.value
+        newState.generalSkills.get(action.type).skill = action.value
     }
 
     return newState
