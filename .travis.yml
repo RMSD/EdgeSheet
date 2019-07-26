@@ -10,6 +10,7 @@ script:
   - npm test
 
 before_deploy:
+  - git init
   - git config user.name "Travis-CI"
   - git config user.email "travis@CI.com"
   - npm run deploy
