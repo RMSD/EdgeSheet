@@ -8,10 +8,3 @@ branches:
 
 script:
   - npm test
-
-deploy:
-  - provider: script
-    skip_cleanup: true
-    script: bash build-scripts/deploy.sh $GITHUB_TOKEN
-    on:
-      branch: master
