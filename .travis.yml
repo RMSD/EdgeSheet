@@ -9,7 +9,6 @@ env:
 branches:
   only:
     - master
-    - gh-pages
 
 script:
   - npm test
@@ -19,7 +18,7 @@ before_deploy:
   - git config user.email "travis@CI.com"
   - npm run deploy
   - git add -A
-  - git push --force --quiet "https://${$GITHUB_TOKEN }@${GH_REF}" origin > /dev/null 2>&1
+  - git push --force --quiet "https://${$GITHUB_TOKEN}@${GH_REF}" origin > /dev/null 2>&1
 
 
 deploy:
