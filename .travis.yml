@@ -2,10 +2,6 @@ language: node_js
 node_js:
   - "10"
 
-env:
-  global:
-    - GH_REF: github.com/RMSD/EdgeSheet.git
-
 branches:
   only:
     - master
@@ -18,8 +14,7 @@ before_deploy:
   - git config user.email "travis@CI.com"
   - npm run deploy
   - git add -A
-  - git push --force --quiet "https://${$GITHUB_TOKEN}@${GH_REF}" origin > /dev/null 2>&1
-
+  - git push --force --quiet "https://${$GITHUB_TOKEN}@github.com/RMSD/EdgeSheet.git" > /dev/null 2>&1
 
 deploy:
   provider: pages
