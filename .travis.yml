@@ -9,18 +9,8 @@ branches:
 script:
   - npm test
 
-before_deploy:
-  - git init
-  - git config user.name "Travis-CI"
-  - git config user.email "travis@CI.com"
-  - npm run deploy
-  - git add -A
-  - git push --force --quiet "https://${GITHUB_TOKEN}@github.com/RMSD/EdgeSheet.git" > /dev/null 2>&1
-
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  
-  keep_history: true
-  on:
-    branch: master
+  - provider: script
+    script: bash build-scripts/deploy.sh $GITHUB_TOKEN
+    on:
+      branch: master
