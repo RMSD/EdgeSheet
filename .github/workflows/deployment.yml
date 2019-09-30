@@ -1,6 +1,6 @@
 name: Automatic deployment
 
-on: [release]
+on: [master]
 
 jobs:
   build:
