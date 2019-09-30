@@ -16,10 +16,10 @@ jobs:
       with:
         node-version: 10
     - name: npm install, build, and deploy
-      run:
-        - npm install
-        - npm run build --if-present
-        - npm run deploy
+      run: |
+        npm install
+        npm run build --if-present
+        npm run deploy
     - name: Auto Commit changed files
       uses: stefanzweifel/git-auto-commit-action@v2.1.0
       with:
