@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.com/RMSD/EdgeSheet.svg?branch=master)](https://travis-ci.com/RMSD/EdgeSheet)
 
-
 ## Local Development
 
 ### How to run this on your local
