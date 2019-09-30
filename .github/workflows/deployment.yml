@@ -29,9 +29,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         COMMIT_MESSAGE: Run deploy.
-        PULL_REQUEST_BODY: Prepare next deployment
-        PULL_REQUEST_TITLE: Web-Deploy
+        PULL_REQUEST_BODY: Prepare next deployment.
+        PULL_REQUEST_TITLE: Website-Deployment
         PULL_REQUEST_REVIEWERS: RMSD
-        PULL_REQUEST_MILESTONE: 1
         PULL_REQUEST_BRANCH: next-deployment
         BRANCH_SUFFIX: none
