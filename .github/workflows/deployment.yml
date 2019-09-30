@@ -4,6 +4,9 @@ on:
   push:
     branches:
     - master
+    paths:
+    - '*'    
+    - '!/docs/*'
 
 jobs:
   build:
@@ -20,10 +23,14 @@ jobs:
         npm install
         npm run build --if-present
         npm run deploy
-    - name: Auto Commit changed files
-      uses: stefanzweifel/git-auto-commit-action@v2.1.0
-      with:
-        commit_message: Apply automatic changes
-        branch: master
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v1.4.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        COMMIT_MESSAGE: Run deploy.
+        PULL_REQUEST_BODY: Prepare next deployment
+        PULL_REQUEST_TITLE: Web-Deploy
+        PULL_REQUEST_REVIEWERS: RMSD
+        PULL_REQUEST_MILESTONE: 1
+        PULL_REQUEST_BRANCH: next-deployment
+        BRANCH_SUFFIX: none
