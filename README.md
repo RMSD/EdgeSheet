@@ -1,6 +1,5 @@
 # Edge Sheets: FFG Star Wars RPG Character generator
-
-[![Build Status](https://travis-ci.com/RMSD/EdgeSheet.svg?branch=master)](https://travis-ci.com/RMSD/EdgeSheet)
+[![Actions Status](https://github.com/RMSD/EdgeSheet/workflows/Run CI/badge.svg)](https://https://github.com/RMSD/EdgeSheet/actions)
 
 ## Local Development
 
