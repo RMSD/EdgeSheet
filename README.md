@@ -48,7 +48,7 @@ Intent:
 What this site is not:
 
 * A rule book. This site is intended to give you a quick reference as to  what your character has in one glance. It does not tell you how to apply those stats or feats. You will still need a rulebook to understand how the game works (or even how to create a character in the first place).
-* An all encompasing system platform like the OggDude Character Generator, or Roll20. The character sheet will be as editable as possible outside of the immediately calculatable items. It will be up to you to track what you spend your xp on, What feats you currently have; and how the rules of the game actually work.
+* An all encompasing system platform like the OggDude Character Generator, or Roll20. The character sheet will be as editable as possible outside of the immediately calculatable items. It will be up to you to track what you spend your xp on, what feats you currently have, and how the rules of the game actually work.
 * A place to store your character sheets. A fuction to import/export to JSON will be provided so you may store it locally/in other cloud services.
 
 ### Comparisons Legends of the Galaxy/OggDude Character Generator
