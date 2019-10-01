@@ -45,7 +45,7 @@ Intent:
 * Simple to use.
 * Offers Customizability/flexibility.
 * A quick refrence sheet for your character.
-* Free.
+* Free and open source.
 
 What this site is not:
 
@@ -67,6 +67,7 @@ Cons:
 * Requires a download.
 * Only works on windows.
 * As it teaches you the rules, feats are not easy to reference.
+* Not Open Source.
 
 ### Comparisons with SWSheets.com
 
@@ -75,6 +76,7 @@ Pros:
 * Cross platform.
 * Manages many characters per account.
 * Offers a simple UI
+* Open source.
 
 Cons:
 
@@ -96,5 +98,5 @@ Pros:
 Cons:
 
 * Much like OggDude's generator, feats require cross refrencing from multiple places, making what you need to remember during combat enormous, making combat slow and a chore.
-* IOS only (No Android, and you can't use it on PC/Mac/Linux even if you like the program better).
-* No Android ( :( )
+* IOS only (No Android :(, and you can't use it on PC/Mac/Linux even if you like the program better).
+* Not Open Source (People can't easily improve things like SWSheets even though FD can import oggdude sheets and SWSheets cannot; and neither OggDude nore SWSheets have the time/motivation to move further on that front).
