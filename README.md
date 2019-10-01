@@ -97,4 +97,4 @@ Cons:
 
 * Much like OggDude's generator, feats require cross refrencing from multiple places, making what you need to remember during combat enormous, making combat slow and a chore.
 * IOS only (No Android :(, and you can't use it on PC/Mac/Linux even if you like the program better).
-* Not Open Source (People can't easily improve things like SWSheets even though FD can import oggdude sheets and SWSheets cannot; and neither OggDude nore SWSheets have the time/motivation to move further on that front).
+* Not Open Source (Even though FD can import oggdude sheets that is difficult to port to SWSheets; and neither OggDude nor SWSheets devs have the time/motivation to move further on that front).
