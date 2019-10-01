@@ -8,9 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import 'bulma/css/bulma.css'
 import Header from "./header"
-import "./css/skeleton.css"
-import "./css/normalize.css"
 import NameplateStateWrapper from "./contexts/nameplate-context";
 import CharacteristicStateWrapper from "./contexts/characteristic-context";
 import SkillStateWrapper from "./contexts/skills-context";
