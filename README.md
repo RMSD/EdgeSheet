@@ -1,7 +1,5 @@
 # Edge Sheets: FFG Star Wars RPG Character generator
 
-[![Actions Status](https://github.com/RMSD/EdgeSheet/workflows/Run CI/badge.svg)](https://https://github.com/RMSD/EdgeSheet/actions)
-
 ## Local Development
 
 This website is a statically generated site using gatsby, with local json as the backing datasource. This provides a fast, responsive experience.
