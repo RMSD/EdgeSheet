@@ -30,7 +30,7 @@ export const SpeciesDropdown = () => {
     });
 
     return (
-        <select className="u-full-width" id="SpeciesSelector" value={state.species.name}
+        <select className="select" id="SpeciesSelector" value={state.species.name}
             onChange={(event) => {
                 dispatch({ type: CHANGE_SPECIES, value: event.target.value })
                 dispatchChar(Object.assign({ type: CHANGE_BASE }, nodes.set(event.target.value)))
@@ -59,7 +59,7 @@ export const CareerDropdown = () => {
     });
 
     return (
-        <select className="u-full-width" id="ClassDropdown" value={state.career.career}
+        <select className="select" id="ClassDropdown" value={state.career.career}
             onChange={(event) => {
                 const node = nodes.get(event.target.value);
                 dispatch({ type: CHANGE_CAREER, value: node })
@@ -89,7 +89,7 @@ export const SpecializationDropdown = () => {
     });
 
     return (
-        <select className="u-full-width" id="SpecializationDropdown" value={state.specialization}
+        <select className="select" id="SpecializationDropdown" value={state.specialization}
             onChange={(event) => {
                 const node = nodes.get(event.target.value);
                 dispatch({ type: CHANGE_SPECIALIZATION, value: node.name })

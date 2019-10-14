@@ -13,27 +13,27 @@ const DiceRender = (characteristicLevel, skillLevel) => {
   const diceDivs = []
 
   diceDivs.push(
-    <div className="two columns" key='ability'>
+    <div className="column" key='ability'>
       <label>{ability}</label>
     </div>)
   diceDivs.push(
-    <div className="three columns" key='abilityDie'>
+    <div className="column" key='abilityDie'>
       <AbilityDie />
     </div>)
 
   if (proficiency > 0) {
     diceDivs.push(
-      <div className="two columns" key='proficiency'>
+      <div className="column" key='proficiency'>
         <label>{proficiency}</label>
       </div>)
     diceDivs.push(
-      <div className="three columns" key='proficiencyDie'>
+      <div className="column" key='proficiencyDie'>
         <ProficiencyDie />
       </div>)
   }
 
   return (
-    <div className="row">
+    <div className="columns">
       {diceDivs}
     </div>
   )
@@ -59,7 +59,7 @@ const SkillTable = () => {
         <td>No</td>
         <td>{DiceRender(characteristic, skill.skill)}</td>
         <td>
-          <select className="u-full-width" id="rankSelector" value={skill.skill}
+          <select className="select" id="rankSelector" value={skill.skill}
             onChange={(event) => dispatch({ type: element.name, value: event.target.value })}>
             <option value="0">0</option>
             <option value="1">1</option>
@@ -75,7 +75,7 @@ const SkillTable = () => {
 
 
   return (
-    <table className="u-full-width" description="Character Skills">
+    <table className="table" description="Character Skills">
       <thead>
         <tr>
           <th>Skill</th>
