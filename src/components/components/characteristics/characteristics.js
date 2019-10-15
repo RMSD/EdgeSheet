@@ -15,10 +15,10 @@ const CharacteristicDescriptionPanel = () => {
         const display = elementValueNumber + additionalValueNumber
 
         columns.push(
-            <div key={element} className="two columns">
+            <div key={element} className="column">
                 <strong>{element}</strong>
                 <p>{display}</p>
-                <input className="u-full-width" type="number" placeholder={"Extra " + element}
+                <input className="input" type="number" placeholder={"Extra " + element}
                     onChange={(event) => dispatch({ type: "CHANGE_" + element.toUpperCase(), value: parseInt(event.target.value) })}
                     id="characterName" />
             </div>)
@@ -34,26 +34,26 @@ const CharacteristicDescriptionPanel = () => {
 
     return (
         <>
-            <div className="row" description="Character Characteristics">
+            <div className="columns" description="Character Characteristics">
                 {columns}
             </div>
 
             <br />
 
-            <div className="row">
-                <div className="three columns">
+            <div className="columns">
+                <div className="column">
                     <strong>Soak</strong>
                     <p>{soak}</p>
                 </div>
-                <div className="three columns">
+                <div className="column">
                     <strong>Wounds Maximum</strong>
                     <p>{maxWounds}</p>
                 </div>
-                <div className="three columns">
+                <div className="column">
                     <strong>Strain Maximum</strong>
                     <p>{maxStrain}</p>
                 </div>
-                <div className="three columns">
+                <div className="column">
                     <strong>Defense Maximums</strong>
                     <p>Melee Defense: {meleeDef} | Ranged Defense: {rangedDef}</p>
                 </div>

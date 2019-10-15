@@ -7,22 +7,25 @@ const CharacterDescriptionPanel = () => {
     const dispatch = useContext(DispatchNamePlate);
 
     return (
-        <div className="row" description="Character Information">
-            <div className="three columns">
+        <div className="columns" description="Character Information">
+            <div className="column">
                 <strong>Character Name</strong>
-                <input className="u-full-width" type="text" value={state.name}
+                <input className="input" type="text" value={state.name}
                     onChange={(event) => dispatch({ type: CHANGE_NAME, value: event.target.value })} id="characterName" />
             </div>
-            <div className="three columns">
+            <div className="column">
                 <strong>Species</strong>
+                <br />
                 <SpeciesDropdown />
             </div>
-            <div className="three columns">
-                <strong>Carrer</strong>
+            <div className="column">
+                <strong>Career</strong>
+                <br />
                 <CareerDropdown />
             </div>
-            <div className="three columns">
+            <div className="column">
                 <strong>Specialization Trees</strong>
+                <br />
                 <SpecializationDropdown />
             </div>
         </div>)
