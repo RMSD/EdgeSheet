@@ -15,14 +15,17 @@ const CharacterDescriptionPanel = () => {
             </div>
             <div className="column">
                 <strong>Species</strong>
+                <br />
                 <SpeciesDropdown />
             </div>
             <div className="column">
-                <strong>Carrer</strong>
+                <strong>Career</strong>
+                <br />
                 <CareerDropdown />
             </div>
             <div className="column">
                 <strong>Specialization Trees</strong>
+                <br />
                 <SpecializationDropdown />
             </div>
         </div>)

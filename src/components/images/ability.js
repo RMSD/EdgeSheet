@@ -4,15 +4,15 @@ import Img from "gatsby-image"
 
 
 const AbilityDie = () => (
-    <StaticQuery
-      query={graphql`
+  <StaticQuery
+    query={graphql`
         query {
             abilityDie: file(relativePath: { eq: "Ability_Die.png" }) {
-              ...squareImage
+              ...SquareImage
           }
         }
       `}
-      render={data => <Img fluid={data.abilityDie.childImageSharp.fluid} />}
-    />
-  )
-  export default AbilityDie
+    render={data => <Img fluid={data.abilityDie.childImageSharp.fluid} />}
+  />
+)
+export default AbilityDie

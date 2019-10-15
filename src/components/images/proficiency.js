@@ -8,7 +8,7 @@ const ProficiencyDie = () => (
       query={graphql`
         query {
           proficiencyDie: file(relativePath: { eq: "Proficiency_Die.png" }) {
-              ...squareImage
+              ...SquareImage
           }
         }
       `}

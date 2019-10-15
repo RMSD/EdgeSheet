@@ -13,27 +13,28 @@ const DiceRender = (characteristicLevel, skillLevel) => {
   const diceDivs = []
 
   diceDivs.push(
-    <div className="column" key='ability'>
-      <label>{ability}</label>
+    <div className="column is-2 is-narrow" key='ability'>
+      <strong>{ability}</strong>
     </div>)
   diceDivs.push(
-    <div className="column" key='abilityDie'>
+    <div className="column is-2 is-narrow" key='abilityDie'>
       <AbilityDie />
     </div>)
+  diceDivs.push(<div className="column is-1" key='gap' />)
 
   if (proficiency > 0) {
     diceDivs.push(
-      <div className="column" key='proficiency'>
-        <label>{proficiency}</label>
+      <div className="column is-2 is-narrow" key='proficiency'>
+        <strong>{proficiency}</strong>
       </div>)
     diceDivs.push(
-      <div className="column" key='proficiencyDie'>
+      <div className="column is-2 is-narrow" key='proficiencyDie'>
         <ProficiencyDie />
       </div>)
   }
 
   return (
-    <div className="columns">
+    <div className="columns is-gapless">
       {diceDivs}
     </div>
   )
@@ -59,15 +60,17 @@ const SkillTable = () => {
         <td>No</td>
         <td>{DiceRender(characteristic, skill.skill)}</td>
         <td>
-          <select className="select" id="rankSelector" value={skill.skill}
-            onChange={(event) => dispatch({ type: element.name, value: event.target.value })}>
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
+          <div className="select">
+            <select id="rankSelector" value={skill.skill}
+              onChange={(event) => dispatch({ type: element.name, value: event.target.value })}>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
         </td>
       </tr>)
   });
@@ -75,7 +78,7 @@ const SkillTable = () => {
 
 
   return (
-    <table className="table" description="Character Skills">
+    <table className="table is-fullwidth">
       <thead>
         <tr>
           <th>Skill</th>
