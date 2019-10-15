@@ -36,7 +36,7 @@ const IndexPage = () => (
       <br />
 
       <h6 {...CenteredHeaderMeta}>Weapons</h6>
-      <table className="u-full-width" description="Character Weapons">
+      <table className="table is-fullwidth" description="Character Weapons">
         <thead>
           <tr>
             <th>Weapon</th>
@@ -50,7 +50,7 @@ const IndexPage = () => (
         <tbody>
           <tr>
             <td>Blaster Pistol</td>
-            <td><div className="row"><div className="two columns"><AbilityDie /></div><div className="two columns"><AbilityDie /></div></div></td>
+            <td><div className="columns is-gapless"><div className="column is-2 is-narrow"><p>2</p></div><div className="column is-2 is-narrow"><AbilityDie /></div></div></td>
             <td>5</td>
             <td>Medium</td>
             <td>2 adv</td>
@@ -71,17 +71,17 @@ const IndexPage = () => (
       <br />
       <br />
 
-      <div className="row">
-        <div className="two columns">
+      <div className="columns">
+        <div className="column is-2">
           <strong>Available Experience</strong>
           <p>0</p>
         </div>
-        <div className="two columns">
+        <div className="column is-2">
           <strong>Total Experience</strong>
           <p>0</p>
         </div>
-        <div className="six columns"><p>&nbsp;</p></div>
-        <div className="two columns">
+        <div className="column is-6"><p>&nbsp;</p></div>
+        <div className="column is-2">
           <strong>Credits</strong>
           <p>0</p>
         </div>
