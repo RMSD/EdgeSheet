@@ -1,4 +1,3 @@
-import { type } from "os";
 import React, { ReactNode } from "react"
 
 interface BlockProps {
@@ -40,4 +39,4 @@ const Block = (props: BlockProps) => {
     )
 }
 
-export default Block;
+export default Block

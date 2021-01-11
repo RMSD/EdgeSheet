@@ -1,5 +1,7 @@
 import React from "react"
-import Block, {BlockPropDef} from "./common/block"
+
+import Column from "./common/column/column"
+import Columns from "./common/column/columns"
 
 interface HeaderProps {
     brawn: number,
@@ -12,11 +14,15 @@ interface HeaderProps {
 
 const Header = (props: HeaderProps) => {
     return (
-        <Block>
-            <Block type={BlockPropDef.notification} isPrimary>test</Block>
-            <Block type={BlockPropDef.notification} isPrimary>test2</Block>
-        </Block>
+        <Columns>
+            <Column>
+                test
+            </Column>
+            <Column>
+                test2
+            </Column>
+        </Columns>
     )
 }
 
-export default Header;
+export default Header

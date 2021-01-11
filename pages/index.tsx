@@ -1,7 +1,7 @@
 //import { GetStaticProps } from 'next'
 
-import 'bulma/css/bulma.css';
-import Header from '../components/header';
+import 'bulma/css/bulma.css'
+import Header from '../components/header'
 
 // load props for this page
 /*export const getStaticProps: GetStaticProps = async (context) => {
@@ -25,4 +25,4 @@ const Main = (): JSX.Element => {
 };
 
 
-export default Main;
+export default Main
